@@ -15,12 +15,17 @@ return [
     'create'              => 'Add a new issue',
     'edit'                => 'Edit the issue',
     'none'                => 'The project does not currently have any issues',
+    'author'              => 'Author',
+    'project'             => 'Project',
     'title'               => 'Title',
     'title_placeholder'   => 'Title',
     'content'             => 'Description',
     'content_placeholder' => 'Description',
+    'commit'              => 'Commit',
+    'branch'              => 'Branch',
     'updated_at'          => 'Updated',
     'confirm'             => 'Confirm',
+    'latest'              => 'Latest',
     'warning'             => 'The issue could not be saved, please check the form below.',
 
 ];

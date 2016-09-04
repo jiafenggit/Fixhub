@@ -6,13 +6,13 @@
   <div class="box-body text-center">
     <p>
       <div class="btn-group">
-      <a href="/admin/projects" class="btn btn-info"><i class="ion ion-edit"></i>{{ trans('projects.manage') }}</a>
+      <a href="{{ route('issues.create') }}" class="btn btn-info"><i class="ion ion-edit"></i>{{ trans('issues.create') }}</a>
       <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
       </button>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="/admin/groups">{{ trans('app.groups') }}</a></li>
+        <li><a href="{{ route('issues.index') }}">{{ trans('issues.label') }}</a></li>
       </ul>
       </div>
     </p>

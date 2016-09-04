@@ -20,6 +20,20 @@ use Fixhub\Models\Issue;
  */
 class IssueController extends Controller
 {
+    public function index()
+    {
+        return view('issues.index', [
+            'title' => trans('issues.label'),
+            'project_id' => 2,
+            'issues' => Issue::paginate(10)
+            ]);
+    }
+
+    public function create()
+    {
+        return view('issues.create', ['title' => trans('issues.create')]);
+    }
+
     /**
      * Store a newly created issue in storage.
      *

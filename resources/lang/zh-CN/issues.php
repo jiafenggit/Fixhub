@@ -15,12 +15,17 @@ return [
     'create'              => '新增工单',
     'edit'                => '编辑',
     'none'                => '该项目暂时还没有任何工单',
+    'author'              => '做着',
+    'project'             => '所属项目',
     'title'               => '标题',
     'title_placeholder'   => '工单标题',
     'content'             => '内容',
     'content_placeholder' => '尽可能简短地描述工单意图',
+    'commit'              => '代码版本',
+    'branch'              => '上线分支',
     'updated_at'          => '最近更新',
     'confirm'             => '确认',
+    'latest'              => '最近工单',
     'warning'             => '保存失败，请检查表单信息.',
 
 ];

@@ -11,15 +11,17 @@
 
 namespace Fixhub\Models;
 
+use Auth;
 use Fixhub\Models\Traits\BroadcastChanges;
+use Fixhub\Presenters\IssuePresenter;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Auth;
+use McCool\LaravelAutoPresenter\HasPresenter;
 
 /**
  * Issue model.
  */
-class Issue extends Model
+class Issue extends Model implements HasPresenter
 {
     use SoftDeletes, BroadcastChanges;
 
@@ -62,6 +64,16 @@ class Issue extends Model
     /**
      * Belongs to relationship.
      *
+     * @return User
+     */
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id', 'id');
+    }
+
+    /**
+     * Belongs to relationship.
+     *
      * @return Project
      */
     public function project()
@@ -77,5 +89,15 @@ class Issue extends Model
     public function comments()
     {
         return $this->morphMany(Comment::class, 'commentable');
+    }
+
+    /**
+     * Get the presenter class.
+     *
+     * @return string
+     */
+    public function getPresenterClass()
+    {
+        return IssuePresenter::class;
     }
 }
