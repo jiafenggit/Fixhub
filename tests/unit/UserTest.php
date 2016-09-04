@@ -44,6 +44,6 @@ class UserTest extends \Codeception\TestCase\Test
         // access model
         $user = User::where('name', 'demo')->first();
 
-        $this->assertEquals('demo@fixhub.org', $user->email);
+        $this->tester->assertEquals('demo@fixhub.org', $user->email);
     }
 }
