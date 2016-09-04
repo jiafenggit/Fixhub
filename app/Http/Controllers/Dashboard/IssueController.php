@@ -20,6 +20,11 @@ use Fixhub\Models\Issue;
  */
 class IssueController extends Controller
 {
+    /**
+     * The main page of the issues.
+     *
+     * @return \Illuminate\View\View
+     */
     public function index()
     {
         return view('issues.index', [
@@ -29,6 +34,11 @@ class IssueController extends Controller
             ]);
     }
 
+    /**
+     * Shows the create issue view.
+     *
+     * @return \Illuminate\View\View
+     */
     public function create()
     {
         return view('issues.create', ['title' => trans('issues.create')]);
